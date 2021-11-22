@@ -61,3 +61,16 @@ sudo snap install helm --classic && \
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash && \
 sudo apt install git-all -y
 </pre>
+
+## 5. az login to Azure on Trident VM
+- `az login --use-device-code`
+- `https://microsoft.com/devicelogin`
+- Verify with this command `kubectl get deployments --all-namespaces=true`
+- Set as default account `az account set -s SUBSCRIPTION_ID`
+
+## 6. Connect to an Azure Red Hat OpenShift cluster
+<pre>
+az aro list-credentials \
+  --name AroCluster01 \
+  --resource-group arotest-rg
+</pre>
