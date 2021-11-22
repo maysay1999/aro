@@ -38,3 +38,16 @@ Use this command to create a clone of this site locally\
 *Running shell*<br />
 `chmod 711 create-subnet.sh`<br />
 `./create-subnet.sh`
+
+## 3. Create ARO cluster
+- Resource group: arotest-rg
+- Cluster name: AroCluster01
+<pre>
+az aro create \
+  --resource-group arotest-rg \
+  --name AroCluster01 \
+  --vnet aro-vnet \
+  --master-subnet master-subnet \
+  --worker-subnet worker-subnet
+</pre>
+
