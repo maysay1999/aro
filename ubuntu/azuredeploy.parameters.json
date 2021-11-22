@@ -1,0 +1,39 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "vmName": {
+        "value": "aroubuntu"
+      },
+      "adminUsername": {
+        "value": null
+      },
+      "authenticationType": {
+        "value": "password"
+      },
+      "adminPasswordOrKey": {
+        "value": null
+      },
+      "dnsLabelPrefix": {
+        "value": "aroubuntu01"
+      },
+      "ubuntuOSVersion": {
+        "value": "18.04-LTS"
+      },
+      "location": {
+        "value": "[resourceGroup().location]"
+      },
+      "vmSize": {
+        "value": "Standard_B2s"
+      },
+      "virtualNetworkName": {
+        "value": "arodemo-vnet"
+      },
+      "subnetName": {
+        "value": "arovm-sub"
+      },
+      "networkSecurityGroupName": {
+        "value": "aroNSG"
+      }
+    }
+  }
