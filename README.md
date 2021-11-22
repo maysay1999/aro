@@ -52,3 +52,16 @@ az aro create \
 </pre>
 **</p>Note: It takes about <span style="color:red">35 minutes</span>. </p>**
 
+## 4. Install kubectl, helm, az cli and git on Ubuntu
+- ~~Install kubectl `sudo snap install kubectl --classic`~~
+- ~~Install helm `sudo snap install helm --classic`~~
+- ~~Install Azure CLI `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`~~
+- ~~Install git `sudo apt install git-all -y`~~
+- Install kubectl, helm, az cli and git
+<pre>
+sudo apt update && 
+sudo snap install kubectl --classic && \
+sudo snap install helm --classic && \
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash && \
+sudo apt install git-all -y
+</pre>
