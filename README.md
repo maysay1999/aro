@@ -34,6 +34,7 @@ Use this command to create a clone of this site locally\
 - VNet name: aro-vnet
 - Master Node subnet: master-subnet
 - Worker Node subnet: worker-subnet
+- Register the Microsoft.RedHatOpenShift resource provider:  `az provider register -n Microsoft.RedHatOpenShift --wait`
 *Running shell*
-*chmod 711 create-subnet.sh*
-*./create-subnet.sh*
+`chmod 711 create-subnet.sh`
+`./create-subnet.sh`
