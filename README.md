@@ -50,5 +50,5 @@ az aro create \
   --master-subnet master-subnet \
   --worker-subnet worker-subnet
 </pre>
-Note: It takes about <span style="color:red">35 minutes</span>. 
+</p>Note: It takes about <span style="color:red">35 minutes</span>. </p>
 
