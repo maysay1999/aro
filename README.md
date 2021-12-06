@@ -90,7 +90,9 @@ az aro show \
 - Home directory: `cd` 
 - Download OpenShift CLI: `curl -L -O -C - https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux.tar.gz`
 - Make a new dierctory: `mkdir openshift`
-- Extract: `tar xzvf openshift-client-linux.tar.gz -C openshift`
+- CD to openshift and Extract: `cd openshift` and `tar ../xzvf openshift-client-linux.tar.gz`
 - Edit .bashrc: `echo 'export PATH=$PATH:~/openshift' >> ~/.bashrc && source ~/.bashrc`
 
+## 9. Connect using the OpenShift CLI
+- Retrieve API server: `apiServer=$(az aro show -g arodemo-rg -n AroCluster01 --query apiserverProfile.url -o tsv)`
 ---
