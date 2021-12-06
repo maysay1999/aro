@@ -85,3 +85,4 @@ az aro list-credentials \
 - Extract: `tar xzvf openshift-client-linux.tar.gz -C openshift`
 - Edit .bashrc: `echo 'export PATH=$PATH:~/openshift' >> ~/.bashrc && source ~/.bashrc`
 
+---
