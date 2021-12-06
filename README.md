@@ -41,7 +41,7 @@ Use this command to create a clone of this site locally\
 `./create-subnet.sh`
 
 ## 3. Create ARO cluster
-- Resource group: arotest-rg
+- Resource group: arodemo-rg
 - Cluster name: AroCluster01
 <pre>
 az aro create \
@@ -73,5 +73,15 @@ sudo apt install git-all -y
 <pre>
 az aro list-credentials \
   --name AroCluster01 \
-  --resource-group arotest-rg
+  --resource-group arodemo-rg
 </pre>
+
+## 7. Login
+
+## 8. Install the OpenShift CLI
+- Home directory: `cd` 
+- Download OpenShift CLI: `curl -L -O -C - https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux.tar.gz`
+- Make a new dierctory: `mkdir openshift`
+- Extract: `tar xzvf openshift-client-linux.tar.gz -C openshift`
+- Edit .bashrc: `echo 'export PATH=$PATH:~/openshift' >> ~/.bashrc && source ~/.bashrc`
+
