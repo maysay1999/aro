@@ -11,7 +11,7 @@ kubectl get no\
 kubectl get nodes -o wide\
 kubectl describe node\
 kubectl get po -o wide\
-kubectl get namespaces -o wide
+kubectl get namespaces -o wide\
 kubectl get ns {name}\
 kubectl get deploy\
 kubectl get pv\
