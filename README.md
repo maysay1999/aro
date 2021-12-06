@@ -78,6 +78,13 @@ az aro list-credentials \
 </pre>
 
 ## 7. Login
+- Obtain URL and login on OpenShift console
+<pre>
+az aro show \
+  --name AroCluster01 \
+  --resource-group arodemo-rg \
+  --query "consoleProfile.url" -o tsv
+</pre>
 
 ## 8. Install the OpenShift CLI
 - Home directory: `cd` 
