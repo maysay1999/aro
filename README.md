@@ -30,6 +30,7 @@ Use this command to create a clone of this site locally\
 - Create Ubuntu VM [ARM for Ubuntu](https://github.com/maysay1999/aro/tree/main/ubuntu)
 
 ## 2. Create VNet and Subnets (create-subnet.azcli)
+`git clone https://github.com/maysay1999/aro.git AroDemo01`
 - Resource group: arotest-rg
 - VNet name: aro-vnet
 - Master Node subnet: master-subnet
