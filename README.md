@@ -50,7 +50,7 @@ az aro create \
   --master-subnet master-subnet \
   --worker-subnet worker-subnet
 </pre>
-**</p>Note: It takes about <span style="color:red">35 minutes</span>. </p>**
+**</p>Note: It takes about ***35 minutes***. </p>**
 
 ## 4. Install kubectl, helm, az cli and git on Ubuntu
 - Install kubectl, helm, az cli and git
