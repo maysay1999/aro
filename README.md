@@ -31,7 +31,7 @@ Use this command to create a clone of this site locally\
 
 ## 2. Create VNet and Subnets (create-subnet.azcli)
 `git clone https://github.com/maysay1999/aro.git AroDemo01`
-- Resource group: arotest-rg
+- Resource group: arodemo-rg
 - VNet name: aro-vnet
 - Master Node subnet: master-subnet
 - Worker Node subnet: worker-subnet
