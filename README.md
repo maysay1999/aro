@@ -45,7 +45,7 @@ Use this command to create a clone of this site locally\
 - Cluster name: AroCluster01
 <pre>
 az aro create \
-  --resource-group arotest-rg \
+  --resource-group arodemo-rg \
   --name AroCluster01 \
   --vnet aro-vnet \
   --master-subnet master-subnet \
