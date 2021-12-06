@@ -70,6 +70,7 @@ sudo apt install git-all -y
 - Set as default account `az account set -s SUBSCRIPTION_ID`
 
 ## 6. Connect to an Azure Red Hat OpenShift cluster
+- Obtain password of "kubeadmin": 
 <pre>
 az aro list-credentials \
   --name AroCluster01 \
