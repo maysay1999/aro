@@ -95,6 +95,10 @@ az aro show \
 
 ## 9. Connect using the OpenShift CLI
 - Retrieve API server: `apiServer=$(az aro show -g arodemo-rg -n AroCluster01 --query apiserverProfile.url -o tsv)`
-- Login to the OpenShift cluster's API server: `oc login $apiServer -u kubeadmin -p <password>`
+- Login to the OpenShift cluster's API server: `oc login $apiServer -u kubeadmin -p xGU3N-33F3a-j7H3n-Nfake`
+- Verify that you are a Kubernetes cluster administrator: `kubectl auth can-i '*' '*' --all-namespaces`
 
+## 10. Install Trident
+- Download Trident: `curl -L -O -C - https://github.com/NetApp/trident/releases/download/v21.07.2/trident-installer-21.07.2.tar.gz`
+- 
 ---
