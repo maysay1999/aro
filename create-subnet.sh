@@ -1,10 +1,10 @@
 # register provider
-az provider register -n Microsoft.RedHatOpenShift --wait
-az provider register -n Microsoft.Compute --wait
+az provider register -n Microsoft.RedHatOpenShift
+az provider register -n Microsoft.Compute
 
 # Vnet with 2 x empty subnets
 LOCATION=japaneast
-RESOURCEGROUP=arotest-rg
+RESOURCEGROUP=arodemo-rg
 CLUSTER=Arocluster01
 
 #
