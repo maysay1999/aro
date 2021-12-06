@@ -95,4 +95,6 @@ az aro show \
 
 ## 9. Connect using the OpenShift CLI
 - Retrieve API server: `apiServer=$(az aro show -g arodemo-rg -n AroCluster01 --query apiserverProfile.url -o tsv)`
+- Login to the OpenShift cluster's API server: `oc login $apiServer -u kubeadmin -p <password>`
+
 ---
