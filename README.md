@@ -99,11 +99,12 @@ az aro show \
 - Verify that you are a Kubernetes cluster administrator: `kubectl auth can-i '*' '*' -A`
 
 ## 10. Install Trident 
+- Back to home direcotory: `cd`
 - Download Trident `curl -L -O -C - https://github.com/NetApp/trident/releases/download/v21.07.2/trident-installer-21.07.2.tar.gz`
 - Extract tar `tar xzvf trident-installer-21.07.2.tar.gz`
-- Copy tridentctl to /usr/bin/  `cd trident-installer || sudo cp tridentctl /usr/local/bin/`
+- Copy tridentctl to /usr/bin/  `cd trident-installer && sudo cp tridentctl /usr/local/bin/`
 - Create a Trident Namespace `kubectl create ns trident`
-- Install trident with helm `cd helm || helm install trident trident-operator-21.07.2.tgz -n trident`
+- Install trident with helm `cd helm && helm install trident trident-operator-21.07.2.tgz -n trident`
 
 
 
