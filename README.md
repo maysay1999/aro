@@ -96,18 +96,21 @@ az aro show \
 ## 9. Connect using the OpenShift CLI
 - Retrieve API server: `apiServer=$(az aro show -g arodemo-rg -n AroCluster01 --query apiserverProfile.url -o tsv)`
 - Login to the OpenShift cluster's API server: `oc login $apiServer -u kubeadmin -p xGU3N-33F3a-j7H3n-Nfake`
-- Verify that you are a Kubernetes cluster administrator: `kubectl auth can-i '*' '*' -A`
+- Verify that you are a Kubernetes cluster administrator: `oc auth can-i '*' '*' -A`
 
 ## 10. Install Trident 
 - Back to home direcotory: `cd`
-- Download Trident `curl -L -O -C - https://github.com/NetApp/trident/releases/download/v21.07.2/trident-installer-21.07.2.tar.gz`
-- Extract tar `tar xzvf trident-installer-21.07.2.tar.gz`
+- Download Trident `curl -L -O -C - https://github.com/NetApp/trident/releases/download/v21.10.0/trident-installer-21.10.0.tar.gz`
+- Extract tar `tar xzvf trident-installer-21.10.0.tar.gz`
 - Copy tridentctl to /usr/bin/  `cd trident-installer && sudo cp tridentctl /usr/local/bin/`
 - Create a Trident Namespace `oc create ns trident`
-- Install trident with helm `cd helm && helm install trident trident-operator-21.07.2.tgz -n trident`
+- Install trident with helm `cd helm && helm install trident trident-operator-21.10.0.tgz -n trident`
 
-## 11. 
-
+## 11. Configure CSI (csi-install.sh)
+- Use this command to create a clone of this site locally `git clone https://github.com/maysay1999/aro.git AroDemo01`
+- `cd ~/AnfDemo01/csi`
+- `chmod 711 csi-install.sh`
+- `./csi-install.sh`
 
 
 
