@@ -56,7 +56,7 @@ az aro create \
 ## 4. Install kubectl, helm, az cli and git on Ubuntu
 - Install kubectl, helm, az cli and git
 <pre>
-sudo apt update && 
+sudo apt update && \
 sudo snap install kubectl --classic && \
 sudo snap install helm --classic && \
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash && \
@@ -98,7 +98,14 @@ az aro show \
 - Login to the OpenShift cluster's API server: `oc login $apiServer -u kubeadmin -p xGU3N-33F3a-j7H3n-Nfake`
 - Verify that you are a Kubernetes cluster administrator: `kubectl auth can-i '*' '*' --all-namespaces`
 
-## 10. Install Trident
-- Download Trident: `curl -L -O -C - https://github.com/NetApp/trident/releases/download/v21.07.2/trident-installer-21.07.2.tar.gz`
-- 
+## 10. Install Trident 
+- Download Trident `curl -L -O -C - https://github.com/NetApp/trident/releases/download/v21.07.2/trident-installer-21.07.2.tar.gz`
+- Extract tar `tar xzvf trident-installer-21.07.2.tar.gz`
+- Copy tridentctl to /usr/bin/  `cd trident-installer || sudo cp tridentctl /usr/local/bin/`
+- Create a Trident Namespace `kubectl create ns trident`
+- Install trident with helm `cd helm || helm install trident trident-operator-21.07.2.tgz -n trident`
+
+
+
+
 ---
