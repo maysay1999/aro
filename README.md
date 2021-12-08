@@ -7,19 +7,19 @@ K8s cheatsheet(https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 ### **Dynamic Provisioning** ==> 1) sc 2) pvc 3) pod
 
 Examples)\
-kubectl get no\
-kubectl get nodes -o wide\
-kubectl describe node\
-kubectl get po -o wide\
-kubectl get namespaces -o wide\
-kubectl get ns {name}\
-kubectl get deploy\
-kubectl get pv\
-kubectl get pvc\
-kubectl get sc\
-kubectl get svc\
-kubectl apply -f {name}.yaml\
-kubectl delete -f {name}.yaml
+kubectl/oc get no\
+kubectl/oc kubectl get nodes -o wide\
+kubectl/oc describe node\
+kubectl/oc get po -o wide\
+kubectl/oc get namespaces -o wide\
+kubectl/oc get ns {name}\
+kubectl/oc get deploy\
+kubectl/oc get pv\
+kubectl/oc get pvc\
+kubectl/oc get sc\
+kubectl/oc get svc\
+kubectl/oc apply -f {name}.yaml\
+kubectl/oc delete -f {name}.yaml
 
 Use this command to create a clone of this site locally\
 `git clone https://github.com/maysay1999/aro.git AroDemo01`
@@ -67,7 +67,7 @@ sudo apt install git-all -y
 - `az login --use-device-code`
 - `https://microsoft.com/devicelogin`
 - Verify with this command `kubectl get deployments --all-namespaces=true`
-- Set as default account `az account set -s SUBSCRIPTION_ID`
+- Set as default account if necessary `az account set -s SUBSCRIPTION_ID`
 
 ## 6. Connect to an Azure Red Hat OpenShift cluster
 - Obtain password of "kubeadmin": 
@@ -103,8 +103,10 @@ az aro show \
 - Download Trident `curl -L -O -C - https://github.com/NetApp/trident/releases/download/v21.07.2/trident-installer-21.07.2.tar.gz`
 - Extract tar `tar xzvf trident-installer-21.07.2.tar.gz`
 - Copy tridentctl to /usr/bin/  `cd trident-installer && sudo cp tridentctl /usr/local/bin/`
-- Create a Trident Namespace `kubectl create ns trident`
+- Create a Trident Namespace `oc create ns trident`
 - Install trident with helm `cd helm && helm install trident trident-operator-21.07.2.tgz -n trident`
+
+## 11. 
 
 
 
