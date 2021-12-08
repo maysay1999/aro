@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # register provider
 az provider register -n Microsoft.RedHatOpenShift
 az provider register -n Microsoft.Compute
