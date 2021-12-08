@@ -107,7 +107,7 @@ az aro show \
 - Install trident with helm `cd helm && helm install trident trident-operator-21.10.0.tgz -n trident`
 
 ## 11. Create Service Principal
-- Creaete a new SP named "http://netapptridentxxx" `az ad sp create-for-rbac --name "http://netapptridentxxx"`
+- Creaete a new SP named "http://netapptridentaroxxx" `az ad sp create-for-rbac --name "http://netapptridentaroxxx"`
 - Gain Subection ID `az account show --query id -o tsv`
 - Gain NetApp Account ID: `az netappfiles account show -n $anf_name -g arodemo-rg --query id -o tsv`
 
