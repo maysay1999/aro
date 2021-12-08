@@ -106,12 +106,18 @@ az aro show \
 - Create a Trident Namespace `oc create ns trident`
 - Install trident with helm `cd helm && helm install trident trident-operator-21.10.0.tgz -n trident`
 
-## 11. Configure CSI (csi-install.sh)
-- Use this command to create a clone of this site locally `git clone https://github.com/maysay1999/aro.git AroDemo01`
-- `cd ~/AnfDemo01/csi`
-- `chmod 711 csi-install.sh`
-- `./csi-install.sh`
+## 11. Create Service Principal
+- Creaete a new SP named "http://netapptridentxxx" `az ad sp create-for-rbac --name "http://netapptridentxxx"`
+- Gain Subection ID `az account show --query id -o tsv`
+- Gain NetApp Account ID: `az netappfiles account show -n $anf_name -g arodemo-rg --query id -o tsv`
 
+## 12. Create role assignment
+<pre>
+anfac=$(az netappfiles account show -n $anf_name -g arodemo-rg --query id -o tsv)
+appid=xxxxxxxxxxxxxxxx
+
+az role assignment create --scope $anfac --assignee $appid --role contributor
+</pre>
 
 
 ---
