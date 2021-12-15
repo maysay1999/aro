@@ -2,9 +2,8 @@
 
 K8s cheatsheet(https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 
-### **Procedure of ARO deployment.  Note: difference between Static Provisioning and Dynamic Provisioning**
-### **Static Provisioning** ==> 1) pv 2) pvc 3) pod
-### **Dynamic Provisioning** ==> 1) sc 2) pvc 3) pod
+**Diagram**
+![ARO dynamic provisioning](https://techcommunity.microsoft.com/t5/image/serverpage/image-id/313111i6BC6DAC97ADC480F/image-dimensions/583x274?v=v2) 
 
 Examples)\
 kubectl/oc get no\
