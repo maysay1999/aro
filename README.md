@@ -2,7 +2,7 @@
 
 K8s cheatsheet(https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 
-**Diagram**
+**Diagram**\
 ![ARO dynamic provisioning](https://techcommunity.microsoft.com/t5/image/serverpage/image-id/313111i6BC6DAC97ADC480F/image-dimensions/583x274?v=v2) 
 
 Examples)\
